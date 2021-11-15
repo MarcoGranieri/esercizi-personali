@@ -1,0 +1,331 @@
+:root {
+    --bg-color : #353353;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------- SIDE BAR ---------- */
+
+aside {
+    background-color: var(--bg-color);
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside .logo {
+    width: 80%;
+    margin-bottom: 20%;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    height: 50%;
+    width: 70%;
+}
+
+aside i {
+    width: 50px;
+    text-align: center;
+    color: #FFD15C;
+}
+
+aside a:hover,
+aside a:focus {
+    color: #FFD15C;
+    transition: 250ms;
+}
+
+
+aside footer {
+    position: absolute;
+    bottom: 5%;
+    opacity: 0.6;
+    color: white;
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #F9F9FF;
+}
+
+/* ---------- 1st SECTION ---------- */
+
+.sez-1 {
+    width: 80%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.presentation {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.propic {
+    background-color: #FFD15C;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url("assets/IMG_0014-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 7%;
+}
+
+.sez-1 h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 5%;
+}
+
+.sez-1 p {
+    color: white;
+    font-weight: 200;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.sez-1 p::before,
+.sez-1 p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sez-1 p::before {
+    background-color: var(--bg-color);
+    animation: typewriter 3s steps(19) 1s forwards;
+}
+
+.sez-1 p::after {
+    width: 0.125em;
+    background-color: white;
+    animation: typewriter 3s steps(19) 1s forwards,
+    blink 750ms steps(19) infinite;
+}
+
+.presentation ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: fadeIn ease forwards 750ms 5s;
+} 
+
+.presentation a:hover {
+    color: #FFD15C;
+    transition: 250ms;
+}
+
+@keyframes typewriter {
+    to {left: 100%;}
+}
+
+@keyframes blink {
+    to {background: transparent;}
+}
+
+@keyframes fadeIn {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+/* ---------- 2nd SECTION ---------- */
+
+.sez-2 {
+    width: 80%;
+    padding: 4% 0 0 0;
+}
+
+.sez-2 h1 {
+    color: var(--bg-color);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-left: 4%;
+    margin-bottom: 3%;
+}
+
+.about-me {
+    display: flex;
+}
+
+.about-me .propic {
+    background-color: #FFD15C;
+    margin-left: 4%;
+    margin-right: 8%;
+}
+
+.speechbubble {
+    width: 60%;
+    background-color: white;
+    height: max-content;
+    padding: 15px;
+    color: var(--bg-color);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 28px 2px rgba(0,0,0,0.1);
+}
+
+.speechbubble::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 100%;
+    left: -30px;
+    display: block;
+    border: 15px solid transparent;
+    border-right: 15px solid white;
+}
+
+/* ---------- 3rd SECTION ---------- */
+
+.sez-3 {
+    width: 80%;
+    padding: 2% 0;
+}
+
+.sez-3 h1 {
+    color: var(--bg-color);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-left: 4%;
+    margin-bottom: 3%;
+}
+
+.esperienze {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+    width: 90%;
+    margin-left: 4%;
+}
+
+.studi, .lavori {
+    width: 48%;
+    height: 50%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 28px 2px rgba(0,0,0,0.1);
+}
+
+.studio, .lavoro {
+    position: relative;
+}
+
+.studio i {
+    margin-left: 4.5%;
+    color: #FF4C60;
+}
+
+
+.lavoro i {
+    margin-left: 5%;
+    color: #FF4C60;
+}
+
+.studio span,
+.lavoro span {
+    color: #8B88B1;
+}
+
+.studio h3 {
+    color: var(--bg-color);
+    margin-left: 12%;
+}
+
+.lavoro span {
+    margin-left: 3%;
+}
+
+.lavoro h3 {
+    color: var(--bg-color);
+    margin-left: 14%;
+}
+
+.studio p {
+    margin-left: 12%;
+    margin-bottom: 5%;
+}
+
+
+.lavoro p {
+    margin-left: 14%;
+    margin-bottom: 5%;
+}
+
+.studio::before,
+#quattro::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 65%;
+    bottom: 0;
+    left: -7px;
+    background-color: #FF4C60;
+    margin-left: 8.5%;
+}
+
+#tre::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 55%;
+    bottom: 0;
+    left: -7px;
+    background-color: #FF4C60;
+    margin-left: 8.5%;
+}
+
+

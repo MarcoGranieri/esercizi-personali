@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgreen;
+    height: 20vh;
+}
+
+nav ul li {
+    font-size: 1.65rem;
+}
+
+aside {
+    width: 30%;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    background-color: red;
+    transition: 500ms;
+}
+
+.home {
+    left: -100vh;
+}
+
+.acquista {
+    left: -100vh;
+}
+
+.contattaci {
+    left: -100vh;
+}
+
+.dove {
+    left: -100vh;
+}

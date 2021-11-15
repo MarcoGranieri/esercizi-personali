@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="homeBtn" href="#">Home</a></li>
+            <li><a class="acquistaBtn" href="#">Acquista</a></li>
+            <li><a class="contattaciBtn" href="#">Contattaci</a></li>
+            <li><a class="doveBtn" href="#">Dove siamo</a></li>
+        </ul>
+    </nav>
+    <aside class="home">
+        <h1>home</h1>
+    </aside>
+    <aside class="acquista">
+        <h1>acquista</h1>
+    </aside>
+    <aside class="contattaci">
+        <h1>contattaci</h1>
+    </aside>
+    <aside class="dove">
+        <h1>dove siamo</h1>
+    </aside>
+</body>
+<script>
+    const homeButton = document.querySelector('.homeBtn')
+    const acquistaButton = document.querySelector('.acquistaBtn')
+    const contattaciButton = document.querySelector('.contattaciBtn')
+    const doveButton = document.querySelector('.doveBtn')
+    const homeSide = document.querySelector('.home');
+    const acquistaSide = document.querySelector('.acquista');
+    const contattaciSide = document.querySelector('.contattaci');
+    const doveSide = document.querySelector('.dove');
+
+    homeButton.addEventListener('click', function() {
+        homeSide.classList.toggle('home');
+    })
+
+    acquistaButton.addEventListener('click', function() {
+        acquistaSide.classList.toggle('acquista');
+    })
+
+    contattaciButton.addEventListener('click', function() {
+        contattaciSide.classList.toggle('contattaci');
+    })
+
+    doveButton.addEventListener('click', function() {
+        doveSide.classList.toggle('dove');
+    })
+</script>
+
+</html>
