@@ -8,6 +8,8 @@ import { AllTasksComponent } from './modules/core/components/all-tasks/all-tasks
 import { ActiveTasksComponent } from './modules/core/components/active-tasks/active-tasks.component';
 import { CompletedTasksComponent } from './modules/core/components/completed-tasks/completed-tasks.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,11 @@
 <div class="container d-flex flex-column align-items-center">
     <h1 class="text-center p-2"><strong>#todo</strong></h1>
-
-    <div class="d-flex justify-content-around">
-        <a href="#">All</a>
-        <a href="#">Active</a>
-        <a href="#">Completed</a>
-    </div>
-    <div class="activeTab"></div>
+    <mat-tab-group mat-stretch-tabs>
+        <mat-tab label="All">
+            <br>
+            <app-all-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-all-tasks>
+        </mat-tab>
+        <mat-tab label="Active"></mat-tab>
+        <mat-tab label="Completed"></mat-tab>
+    </mat-tab-group>
 </div>
-<hr>
-<app-all-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-all-tasks>

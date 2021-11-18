@@ -1,13 +1,11 @@
-<div class="task-container container">
-    <form (ngSubmit)="addTask()" class="d-flex justify-content-between">
-        <input class="inputTasks" type="text" placeholder=" add new task" name="inputTasks" [(ngModel)]="inputTasks">
-        <button type="submit" class="btn btn-primary">Add</button>
-    </form>
-    <div class="task {{ (task.completed ? 'done' : '') }}" *ngFor="let task of tasks; let i = index">
-        <div class="d-flex align-items-center justify-content-between">
-            <input (click)="toggleDone(i)" type="checkbox">
-            <div class="content">{{task.title}}</div>
-        </div>
-        <button (click)="remove(task)" class="delete">Delete</button>
+<form (ngSubmit)="addTask()" class="d-flex justify-content-between">
+    <input class="inputTasks" type="text" placeholder=" add new task" name="inputTasks" [(ngModel)]="inputTasks">
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+<div class="task {{ (task.completed ? 'done' : '') }}" *ngFor="let task of tasks; let i = index">
+    <div class="d-flex align-items-center justify-content-between">
+        <input (click)="toggleDone(i)" type="checkbox">
+        <div class="content">{{task.title}}</div>
     </div>
+    <button (click)="remove(task)" class="delete">Delete</button>
 </div>

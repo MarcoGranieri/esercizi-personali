@@ -32,10 +32,10 @@ export class AllTasksComponent implements OnInit {
   }
 
   toggleDone (id:number) {
-    this.tasks?.map((v, i) => {
-      if (i == id) v.completed = !v.completed;
+    this.tasks?.map((task, i) => {
+      if (i == id) task.completed = !task.completed;
 
-      return v;
+      return task;
     })
   }
 
