@@ -5,7 +5,13 @@
             <br>
             <app-all-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-all-tasks>
         </mat-tab>
-        <mat-tab label="Active"></mat-tab>
-        <mat-tab label="Completed"></mat-tab>
+        <mat-tab label="Active">
+            <br>
+            <app-active-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-active-tasks>
+        </mat-tab>
+        <mat-tab label="Completed">
+            <br>
+            <app-completed-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-completed-tasks>
+        </mat-tab>
     </mat-tab-group>
 </div>
