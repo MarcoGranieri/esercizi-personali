@@ -2,17 +2,16 @@ import { Itodo } from './../../../models';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-active-tasks',
-  templateUrl: './active-tasks.component.html',
-  styleUrls: ['./active-tasks.component.scss']
+  selector: 'app-tasks',
+  templateUrl: './tasks.component.html',
+  styleUrls: ['./tasks.component.scss']
 })
-export class ActiveTasksComponent implements OnInit {
-
+export class TasksComponent implements OnInit {
   @Input() tasks?:Itodo[];
-
+  @Input() type! : "all" | "active" | "completed";
   @Output() delete = new EventEmitter<Itodo>();
-  inputTasks:string ="";
 
+  inputTasks:string ="";
 
   constructor() { }
 
@@ -35,7 +34,6 @@ export class ActiveTasksComponent implements OnInit {
   toggleDone (id:number) {
     this.tasks?.map((task, i) => {
       if (i == id) task.completed = !task.completed;
-
       return task;
     })
   }

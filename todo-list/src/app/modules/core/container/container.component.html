@@ -3,15 +3,15 @@
     <mat-tab-group mat-stretch-tabs>
         <mat-tab label="All">
             <br>
-            <app-all-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-all-tasks>
+            <app-tasks [type]="'all'" (delete)="removeTask($event)" [tasks]="tasks"></app-tasks>
         </mat-tab>
         <mat-tab label="Active">
             <br>
-            <app-active-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-active-tasks>
+            <app-tasks [type]="'active'" (delete)="removeTask($event)" [tasks]="tasks"></app-tasks>
         </mat-tab>
         <mat-tab label="Completed">
             <br>
-            <app-completed-tasks (delete)="removeTask($event)" [tasks]="tasks"></app-completed-tasks>
+            <app-tasks [type]="'completed'" (delete)="removeTask($event)" [tasks]="tasks"></app-tasks>
         </mat-tab>
     </mat-tab-group>
 </div>
