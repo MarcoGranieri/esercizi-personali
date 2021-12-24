@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.taskForm {
+    width: 100%;
+}
+
 .task {
     display: flex;
     align-items: center;
@@ -12,8 +16,8 @@
 }
 
 .inputTasks {
-    width: 80%;
-    height: 60px;
+    width: 60%;
+    height: 40px;
     border-radius: 10px;
     border: 1px solid grey;
     opacity: 0.5;
@@ -21,9 +25,9 @@
 }
 
 .btn-primary {
-    height: 60px;
+    height: 45px;
     border-radius: 10px;
-    width: 18%;
+    width: 10%;
 }
 
 .content {
@@ -41,4 +45,12 @@ i {
 .accordion button {
     width: 100%;
     display: block;
+}
+
+.checkTaskBtn {
+    color: green;
+}
+
+.removeTaskBtn {
+    color: red;
 }

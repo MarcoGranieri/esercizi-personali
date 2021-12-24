@@ -1,5 +1,5 @@
-<form (ngSubmit)="addTask()" class="d-flex justify-content-between">
-    <input class="inputTasks" type="text" placeholder=" add new task" name="inputTasks" [(ngModel)]="inputTasks">
+<form (ngSubmit)="addTask()" class="d-flex justify-content-between taskForm">
+    <input class="inputTasks" autocomplete="off" type="text" placeholder=" add new task" name="inputTasks" [(ngModel)]="inputTasks">
     <button type="submit" class="btn btn-primary">Add</button>
 </form>
 
@@ -9,9 +9,9 @@
         <div class="d-flex align-items-center justify-content-between">
             <div class="content">{{task.title}}</div>
         </div>
-        <div class="d-flex justify-content-between align-items-center" style="width: 15%;">
-            <a href="#" (click)="toggleDone(i)"><i style="color: green;" class="large material-icons">check_circle</i></a>
-            <a href="#" (click)="remove(task)"><i style="color: red;" class="large material-icons">delete</i></a>
+        <div class="d-flex justify-content-between align-items-center" style="width: 10%;">
+            <a href="#" (click)="toggleDone(i)"><i class="large material-icons checkTaskBtn">check_circle</i></a>
+            <a href="#" (click)="remove(task)"><i class="large material-icons removeTaskBtn">delete</i></a>
         </div>
     </div>
 </ng-container>
